@@ -9,6 +9,8 @@ public class Window extends Application {
     private static Stage window;
     private static Scene loginScene;
 
+    private static final LoginLayout loginLayout = new LoginLayout();
+
     @Override
     public void start(Stage stage) throws Exception {
         window = stage;
@@ -18,6 +20,9 @@ public class Window extends Application {
             System.exit(0);
         });
 
+        loginScene = new Scene(loginLayout, 500, 500);
+
+        window.setScene(loginScene);
         window.show();
     }
 
